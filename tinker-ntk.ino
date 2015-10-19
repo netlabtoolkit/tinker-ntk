@@ -149,7 +149,7 @@ int tinkerAnalogRead(String pin)
 	}
 	else if (pin.startsWith("A"))
 	{
-		pinMode(pinNumber+10, INPUT);
+		//pinMode(pinNumber+10, INPUT);
 		return analogRead(pinNumber+10);
 	}
 	return -2;
