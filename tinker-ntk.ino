@@ -68,10 +68,6 @@ void loop()
  * Return         : Value of the pin (0 or 1) in INT type
                     Returns a negative number on failure
  *******************************************************************************/
-int test(String command) {
-    Serial.println("test");
-    Serial.println(command);
-}
 
 int tinkerDigitalRead(String pin)
 {
