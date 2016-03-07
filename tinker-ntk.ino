@@ -50,8 +50,6 @@ void setup()
 
 	Spark.function("analogread", tinkerAnalogRead);
 	Spark.function("analogwrite", tinkerAnalogWrite);
-	
-    Serial.begin(9600);
 }
 
 /* This function loops forever --------------------------------------------*/
@@ -160,7 +158,6 @@ int tinkerAnalogRead(String pin)
  *******************************************************************************/
 int tinkerAnalogWrite(String command)
 {
-    Serial.println(command);
 	//convert ascii to integer
 	int pinNumber = command.charAt(1) - '0';
 	//Sanity check to see if the pin numbers are within limits
@@ -189,8 +186,7 @@ int tinkerAnalogWrite(String command)
 	        singleServo1.attach(D1);
 	        singleServo1.write(value.toInt());
 	    }
-	    return 1;
-	    
+	    return 1;  
 	}
 	else return -2;
 }
